@@ -1,0 +1,22 @@
+Guidelines to compile imprudence on SnowLeopard
+Kentron Katana Apr 16, 2012
+
+This instructions will compile Imprudence.app (no .dmg file)
+In a terminal, go to source directory. Then:
+cd ./linden/indra/
+python develop.py
+
+Open Xcode project file ./linden/indra/build-darwin-i386/Imprudence.xcodeproj
+Inside Xcode, select the project item and get info. Set:
+Architectures: 32-bit Universal
+Base SDK: MacOSX10.5.sdk
+Valid Architectures: i386 (delete ppc since it will stop the compile process)
+C/C++ Compiler Version: GCC 4.2
+
+Optional:
+Enable SSE3 Extensions
+Enable supplemental SSE3 Instructions
+
+Press green button "Build and Run"
+
+Imprudence.app will be at ./linden/indra/build-darwin-i386/newview/RelWithDebInfo
