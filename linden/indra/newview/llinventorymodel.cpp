@@ -455,7 +455,7 @@ LLUUID LLInventoryModel::createNewCategory(const LLUUID& parent_id,
 										   void (*callback)(const LLSD&, void*),
 										   void* user_data)
 {
-	llassert_always(NULL != callback);
+	//llassert_always(NULL != callback);
 
 	LLUUID id;
 
